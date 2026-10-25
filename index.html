@@ -7,36 +7,78 @@
 <meta name="description" content="Studio 3 is a small independent studio making games for phones.">
 <meta property="og:title" content="Studio 3 | Indie mobile games">
 <meta property="og:description" content="Studio 3 is a small independent studio making games for phones.">
+<meta property="og:image" content="img/runebound/feature.jpg">
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<script src="site.js" defer></script>
 </head>
 <body class="t-studio">
 <header class="site-head"><a class="brand" href="./">Studio&nbsp;3</a>
 <nav><a href="#games">Games</a><a href="#contact">Contact</a></nav></header>
 <main class="home">
-<section class="intro">
+<section class="reel" aria-label="Gameplay showreel">
+<div class="reel-stage portrait" style="--poster:url('img/runebound/poster.webp')">
+<video id="reel" class="gv-video" src="video/runebound.mp4" poster="img/runebound/poster.webp" width="720" height="1280"
+ muted playsinline preload="none" controls aria-label="Gameplay showreel: Runebound Depths, no sound"></video>
+<button class="gv-play" type="button" hidden aria-label="Play the gameplay showreel"><svg aria-hidden="true" viewBox="0 0 24 24" width="34" height="34"><path fill="currentColor" d="M8 5.5v13a1 1 0 0 0 1.5.86l10.6-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg></button>
+<a class="reel-cap" href="runebound/"><img src="img/runebound/icon.webp" alt="" width="40" height="40">
+<span><b>Runebound Depths</b><small>See the game</small></span></a>
+</div>
+<div class="reel-side">
 <h1>Studio 3</h1>
 <p class="lead">A small independent studio making games for phones.</p>
-<p>Our games are free on Google Play. iPhone and iPad versions are on the way.</p>
+<p class="intro-sub">Free on Google Play, with iPhone and iPad versions on the way. Every clip is real gameplay.</p>
+<ul class="reel-thumbs" aria-label="Choose a game to watch">
+<li><button type="button" class="reel-thumb" aria-pressed="true"
+ data-src="video/runebound.mp4" data-poster="img/runebound/poster.webp" data-href="runebound/" data-name="Runebound Depths"
+ data-short="Runebound Depths" data-icon="img/runebound/icon.webp" data-orient="portrait">
+<img src="img/runebound/icon.webp" alt="" width="48" height="48" decoding="async"><span>Runebound Depths</span></button></li>
+<li><button type="button" class="reel-thumb" aria-pressed="false"
+ data-src="video/stormace.mp4" data-poster="img/stormace/poster.webp" data-href="stormace/" data-name="Storm Ace: Sky Shooter"
+ data-short="Storm Ace" data-icon="img/stormace/icon.webp" data-orient="portrait">
+<img src="img/stormace/icon.webp" alt="" width="48" height="48" decoding="async"><span>Storm Ace</span></button></li>
+<li><button type="button" class="reel-thumb" aria-pressed="false"
+ data-src="video/voidrunner.mp4" data-poster="img/voidrunner/poster.webp" data-href="voidrunner/" data-name="Void Runner: Skyfall Tide"
+ data-short="Void Runner" data-icon="img/voidrunner/icon.webp" data-orient="portrait">
+<img src="img/voidrunner/icon.webp" alt="" width="48" height="48" decoding="async"><span>Void Runner</span></button></li>
+<li><button type="button" class="reel-thumb" aria-pressed="false"
+ data-src="video/nextruler.mp4" data-poster="img/nextruler/poster.webp" data-href="nextruler/" data-name="The Next Ruler: War Strategy"
+ data-short="The Next Ruler" data-icon="img/nextruler/icon.webp" data-orient="landscape">
+<img src="img/nextruler/icon.webp" alt="" width="48" height="48" decoding="async"><span>The Next Ruler</span></button></li>
+<li><button type="button" class="reel-thumb" aria-pressed="false"
+ data-src="video/100000cats.mp4" data-poster="img/100000cats/poster.webp" data-href="100000cats/" data-name="100,000 Cats"
+ data-short="100,000 Cats" data-icon="img/100000cats/icon.webp" data-orient="portrait">
+<img src="img/100000cats/icon.webp" alt="" width="48" height="48" decoding="async"><span>100,000 Cats</span></button></li>
+</ul>
+</div>
 </section>
 <section id="games"><h2>Our games</h2>
 <ul class="cards">
-<li class="card t-voidrunner"><a href="voidrunner/">
-<img class="card-art" src="img/voidrunner/feature.webp" alt="" width="1024" height="500" loading="lazy" decoding="async">
+<li class="card t-voidrunner"><a href="voidrunner/" data-preview="video/voidrunner.mp4">
+<span class="card-media portrait"><img class="card-art" src="img/voidrunner/poster.webp" alt=""
+ width="720" height="1280" loading="lazy" decoding="async"></span>
 <div class="card-body"><img class="card-icon" src="img/voidrunner/icon.webp" alt="" width="64" height="64">
 <div><h3>Void Runner: Skyfall Tide</h3><p>Skim a jet over endless waves. Dodge pillars, catch parts, build 15 ships.</p></div></div></a></li>
-<li class="card t-nextruler"><a href="nextruler/">
-<img class="card-art" src="img/nextruler/feature.webp" alt="" width="1024" height="500" loading="lazy" decoding="async">
+<li class="card t-nextruler"><a href="nextruler/" data-preview="video/nextruler.mp4">
+<span class="card-media landscape"><img class="card-art" src="img/nextruler/poster.webp" alt=""
+ width="1280" height="720" loading="lazy" decoding="async"></span>
 <div class="card-body"><img class="card-icon" src="img/nextruler/icon.webp" alt="" width="64" height="64">
 <div><h3>The Next Ruler: War Strategy</h3><p>Secretly arm both sides of a toy war. Keep it going until the bomb drops.</p></div></div></a></li>
-<li class="card t-runebound"><a href="runebound/">
-<img class="card-art" src="img/runebound/feature.webp" alt="" width="1024" height="500" loading="lazy" decoding="async">
+<li class="card t-runebound"><a href="runebound/" data-preview="video/runebound.mp4">
+<span class="card-media portrait"><img class="card-art" src="img/runebound/poster.webp" alt=""
+ width="720" height="1280" loading="lazy" decoding="async"></span>
 <div class="card-body"><img class="card-icon" src="img/runebound/icon.webp" alt="" width="64" height="64">
 <div><h3>Runebound Depths</h3><p>Auto-casting wizard roguelike. Dodge swarms, stack spells, dive 50 floors deep.</p></div></div></a></li>
-<li class="card t-100000cats"><a href="100000cats/">
-<img class="card-art" src="img/100000cats/feature.webp" alt="" width="1024" height="500" loading="lazy" decoding="async">
+<li class="card t-100000cats"><a href="100000cats/" data-preview="video/100000cats.mp4">
+<span class="card-media portrait"><img class="card-art" src="img/100000cats/poster.webp" alt=""
+ width="720" height="1280" loading="lazy" decoding="async"></span>
 <div class="card-body"><img class="card-icon" src="img/100000cats/icon.webp" alt="" width="64" height="64">
 <div><h3>100,000 Cats</h3><p>A calm puzzle of thousands of cats. Drag each one home and fill a giant mural.</p></div></div></a></li>
+<li class="card t-stormace"><a href="stormace/" data-preview="video/stormace.mp4">
+<span class="card-media portrait"><img class="card-art" src="img/stormace/poster.webp" alt=""
+ width="720" height="1280" loading="lazy" decoding="async"></span>
+<div class="card-body"><img class="card-icon" src="img/stormace/icon.webp" alt="" width="64" height="64">
+<div><h3>Storm Ace: Sky Shooter</h3><p>Endless sky shooter. Guns down planes, bombs sink ships. Beat every sector&#x27;s boss.</p><p class="tag">Coming soon</p></div></div></a></li>
 </ul></section>
 <section id="contact" class="contact"><h2>Contact</h2>
 <p>Questions, bug reports or business enquiries: <a href="mailto:jzmile69@gmail.com">jzmile69@gmail.com</a></p>
