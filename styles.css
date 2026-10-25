@@ -1,0 +1,94 @@
+/* Studio 3: one stylesheet, a theme per game (body.t-<slug>). Mobile first. */
+:root { color-scheme: dark; }
+.t-studio          { --bg:#0e1014; --surface:#181b22; --fg:#f2f3f5; --muted:#a3a9b6; --accent:#7cc4ff; --accent-ink:#06121f; --line:#2a2f3a; }
+.t-voidrunner     { --bg:#060a17; --surface:#0f1730; --fg:#e8f3ff; --muted:#93a6c4; --accent:#3fd0ff; --accent-ink:#021320; --line:#1e2b4d; }
+.t-nextruler  { --bg:#1d1408; --surface:#2b1f0f; --fg:#fff6e3; --muted:#d3bf96; --accent:#ffc21a; --accent-ink:#2a1a00; --line:#4a3618; }
+.t-runebound{ --bg:#140a1d; --surface:#21112e; --fg:#fbeeff; --muted:#c3a6d3; --accent:#ff58c0; --accent-ink:#2a0420; --line:#3b1f4f; }
+.t-100000cats     { --bg:#fff8ec; --surface:#ffffff; --fg:#3b2c35; --muted:#7a6670; --accent:#d9792a; --accent-ink:#ffffff; --line:#f0e1c9; color-scheme: light; }
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--fg);
+  font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--accent); }
+h1, h2, h3 { line-height: 1.2; text-wrap: balance; }
+h2 { font-size: 1.35rem; margin: 2.25rem 0 .75rem; }
+h3 { font-size: 1.05rem; margin: 1.5rem 0 .4rem; }
+.small, .meta { color: var(--muted); font-size: .9rem; }
+
+.site-head, main, .site-foot { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+.site-head { display: flex; align-items: center; justify-content: space-between; height: 56px; }
+.brand { color: var(--fg); font-weight: 800; letter-spacing: .02em; text-decoration: none; font-size: 1.1rem; }
+.site-head nav a { color: var(--muted); text-decoration: none; margin-left: 18px; font-size: .95rem; }
+.site-head nav a:hover { color: var(--fg); }
+.site-foot { border-top: 1px solid var(--line); margin-top: 3rem; padding-top: 1rem; padding-bottom: 2rem; color: var(--muted); font-size: .9rem; }
+.site-foot p { margin: .3rem 0; }
+.site-foot .small { font-size: .78rem; }
+
+/* Home */
+.intro { padding: 2rem 0 .5rem; }
+.intro h1 { font-size: clamp(2.2rem, 8vw, 3.5rem); margin: 0 0 .5rem; letter-spacing: -.02em; }
+.lead { font-size: 1.2rem; margin: 0 0 .5rem; }
+.intro p:not(.lead) { color: var(--muted); margin: 0; }
+.cards { list-style: none; padding: 0; margin: 0; display: grid; gap: 16px; }
+.card a { display: block; height: 100%; background: var(--surface); color: var(--fg); border: 1px solid var(--line);
+  border-radius: 16px; overflow: hidden; text-decoration: none; transition: transform .15s ease, border-color .15s ease; }
+.card a:hover { transform: translateY(-2px); border-color: var(--accent); }
+.card-art { aspect-ratio: 1024 / 500; width: 100%; object-fit: cover; }
+.card-body { display: flex; gap: 14px; padding: 14px 16px 18px; align-items: flex-start; }
+.card-icon { width: 56px; height: 56px; border-radius: 13px; flex: none; }
+.card h3 { margin: 0 0 .25rem; color: var(--accent); }
+.card p { margin: 0; color: var(--muted); font-size: .95rem; }
+.contact p { margin: .25rem 0; }
+
+/* Game page */
+.hero .feature { width: 100%; aspect-ratio: 1024 / 500; object-fit: cover; border-radius: 16px; margin-top: 4px; }
+.title-row { display: flex; gap: 14px; align-items: center; margin: 18px 0 14px; }
+.title-row .icon { width: 80px; height: 80px; border-radius: 18px; flex: none; box-shadow: 0 4px 18px rgb(0 0 0 / .3); }
+.title-row h1 { font-size: clamp(1.5rem, 6vw, 2.4rem); margin: 0 0 .25rem; }
+.tagline { margin: 0; color: var(--muted); }
+.stores { display: flex; flex-wrap: wrap; gap: 10px; }
+.btn-play, .soon { display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 6px 18px 6px 14px;
+  border-radius: 12px; font-weight: 700; font-size: 1.1rem; line-height: 1.1; text-decoration: none; }
+.btn-play { background: var(--accent); color: var(--accent-ink); }
+.btn-play:hover { filter: brightness(1.08); }
+.soon { border: 1.5px dashed var(--muted); color: var(--muted); padding-left: 18px; }
+.btn-play small, .soon small { display: block; font-size: .7rem; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; opacity: .85; }
+
+.shots { list-style: none; margin: 0 -16px; padding: 4px 16px 12px; display: flex; gap: 12px; overflow-x: auto;
+  scroll-snap-type: x mandatory; scrollbar-width: thin; }
+.shots li { flex: none; scroll-snap-align: start; }
+.shots img { border-radius: 12px; border: 1px solid var(--line); background: var(--surface); }
+.shots.portrait img { width: 46vw; max-width: 240px; aspect-ratio: 9 / 16; object-fit: cover; }
+.shots.landscape img { width: 82vw; max-width: 460px; aspect-ratio: 16 / 9; object-fit: cover; }
+
+.about { max-width: 70ch; }
+.about ul, .doc ul { padding-left: 1.25rem; }
+.about li, .doc li { margin: .25rem 0; }
+.links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 2rem; }
+.links a { padding: 10px 16px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface);
+  color: var(--fg); text-decoration: none; font-weight: 600; }
+.links a:hover { border-color: var(--accent); }
+
+/* Privacy / support */
+.doc { max-width: 720px; }
+.doc h1 { font-size: clamp(1.6rem, 6vw, 2.2rem); margin: .5rem 0 .25rem; }
+.doc h2 { color: var(--accent); font-size: 1.15rem; margin-top: 2rem; }
+.doc p { margin: 0 0 .8rem; }
+.sub-head { display: flex; gap: 12px; align-items: center; margin-top: 8px; }
+.sub-head img { width: 48px; height: 48px; border-radius: 11px; }
+.sub-head p { margin: 0; line-height: 1.3; }
+.sub-head p a { color: var(--fg); font-weight: 700; text-decoration: none; }
+.sub-head span { color: var(--muted); font-size: .9rem; }
+.btn-mail { display: inline-block; padding: 12px 18px; border-radius: 12px; background: var(--accent);
+  color: var(--accent-ink); font-weight: 700; text-decoration: none; overflow-wrap: anywhere; }
+
+@media (min-width: 720px) {
+  .cards { grid-template-columns: 1fr 1fr; gap: 22px; }
+  .title-row .icon { width: 112px; height: 112px; border-radius: 24px; }
+  .shots { margin: 0; padding-left: 0; padding-right: 0; }
+  .shots.portrait img { width: 220px; }
+}
+@media (prefers-reduced-motion: reduce) { .card a { transition: none; } }
+.about h3.caps { font-size: .85rem; letter-spacing: .08em; color: var(--accent); margin-top: 1.75rem; }
