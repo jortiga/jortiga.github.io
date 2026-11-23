@@ -4,6 +4,7 @@
 .t-voidrunner     { --bg:#060a17; --surface:#0f1730; --fg:#e8f3ff; --muted:#93a6c4; --accent:#3fd0ff; --accent-ink:#021320; --line:#1e2b4d; }
 .t-nextruler  { --bg:#1d1408; --surface:#2b1f0f; --fg:#fff6e3; --muted:#d3bf96; --accent:#ffc21a; --accent-ink:#2a1a00; --line:#4a3618; }
 .t-runebound{ --bg:#140a1d; --surface:#21112e; --fg:#fbeeff; --muted:#c3a6d3; --accent:#ff58c0; --accent-ink:#2a0420; --line:#3b1f4f; }
+.t-grantoretto  { --bg:#0a0716; --surface:#171030; --fg:#f3efff; --muted:#a9a0c8; --accent:#ff3d8b; --accent-ink:#2a0414; --line:#2c2250; }
 .t-stormace       { --bg:#0b1118; --surface:#16202b; --fg:#e9eef3; --muted:#9aa8b8; --accent:#f2a93b; --accent-ink:#1d1200; --line:#273445; }
 .t-100000cats     { --bg:#fff8ec; --surface:#ffffff; --fg:#3b2c35; --muted:#7a6670; --accent:#d9792a; --accent-ink:#ffffff; --line:#f0e1c9; color-scheme: light; }
 
