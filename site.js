@@ -56,6 +56,7 @@
       stage.classList.toggle('landscape', d.orient === 'landscape');
       stage.classList.toggle('portrait', d.orient !== 'landscape');
       stage.style.setProperty('--poster', `url('${d.poster}')`);
+      if (d.bg) document.body.style.setProperty('--page-art', `url('${d.bg}')`);
       reel.poster = d.poster; reel.src = d.src;
       reel.setAttribute('aria-label', `Gameplay showreel: ${d.short}, no sound`);
       cap.href = d.href; cap.querySelector('img').src = d.icon; cap.querySelector('b').textContent = d.name;
