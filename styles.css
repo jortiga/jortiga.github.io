@@ -144,3 +144,4 @@ h3 { font-size: 1.05rem; margin: 1.5rem 0 .4rem; }
 @media (min-width: 1000px) { .cards { grid-template-columns: repeat(3, 1fr); } }
 @media (prefers-reduced-motion: reduce) { .card a, .gv-play { transition: none; } }
 .about h3.caps { font-size: .85rem; letter-spacing: .08em; color: var(--accent); margin-top: 1.75rem; }
+.t-slashtitans    { --bg:#0d0820; --surface:#1a1236; --fg:#efe8ff; --muted:#a99cc9; --accent:#5ee7ff; --accent-ink:#04141a; --line:#2d2350; }
